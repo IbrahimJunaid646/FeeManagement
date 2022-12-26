@@ -1,6 +1,7 @@
 package com.dodo.feemanagement;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.AppCompatImageView;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
@@ -10,7 +11,7 @@ import com.google.android.material.button.MaterialButton;
 
 public class AddParent extends AppCompatActivity {
 
-    MaterialButton back;
+    AppCompatImageView back;
 
     @SuppressLint("MissingInflatedId")
     @Override

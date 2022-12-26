@@ -29,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent=new Intent(MainActivity.this, Home.class);
 
                 Log.e("aksdja","dsd0000");
+                Log.e("aksdja","dsd0000");
                 startActivity(intent);
             }
         });

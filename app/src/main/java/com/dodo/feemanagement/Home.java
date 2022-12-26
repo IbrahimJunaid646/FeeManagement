@@ -36,6 +36,13 @@ public class Home extends AppCompatActivity {
                 startActivity(new Intent(getApplicationContext(), AddStudent.class)));
         buttonAddParent.setOnClickListener(v ->
                 startActivity(new Intent(getApplicationContext(), AddParent.class)));
+        buttonRemoveStudent.setOnClickListener(v ->
+                startActivity(new Intent(getApplicationContext(), RemoveStudent.class)));
+        buttonRemoveStaff.setOnClickListener(v ->
+                startActivity(new Intent(getApplicationContext(), RemoveStaff.class)));
+        buttonRemoveParent.setOnClickListener(v ->
+                startActivity(new Intent(getApplicationContext(), RemoveParent.class)));
+
     }
 
 }

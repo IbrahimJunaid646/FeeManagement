@@ -65,5 +65,17 @@
         android:fontFamily="@font/ubuntu_medium"
         />
 
+    <TextView
+        android:id="@+id/buttonForgotPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Forgot Password?"
+        android:gravity="center"
+        android:textColor="@color/colorTextHint"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:shadowRadius="10"
+        android:shadowColor="@color/colorBlack"
+        />
+
 
 </LinearLayout>

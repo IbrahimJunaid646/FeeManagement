@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "23613960774",
+    "project_id": "feemanagementsystem-c11c5",
+    "storage_bucket": "feemanagementsystem-c11c5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:23613960774:android:4bb69b451e07f6a3631047",
+        "android_client_info": {
+          "package_name": "com.dodo.feemanagement"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "23613960774-ap5afsnll466l7og3bfml4dapee6f7ua.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAq_KwlnQ_chR3l7s960Z9dTgJi43yAml0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "23613960774-ap5afsnll466l7og3bfml4dapee6f7ua.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

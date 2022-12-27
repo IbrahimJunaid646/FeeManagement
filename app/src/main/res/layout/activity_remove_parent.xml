@@ -87,7 +87,7 @@
         android:layout_marginTop="@dimen/_12sdp"
         android:backgroundTint="@color/colorAccent"
         app:cornerRadius="20dp"
-        android:text="Search Staff"
+        android:text="Search Parent"
         android:textColor="@color/colorBlack"
         android:fontFamily="@font/ubuntu_regular"
         />

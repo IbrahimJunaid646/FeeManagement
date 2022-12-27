@@ -1,6 +1,8 @@
 package com.dodo.feemanagement;
 
+import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.AppCompatImageView;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
@@ -8,10 +10,12 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.google.android.material.button.MaterialButton;
+import com.google.firebase.auth.FirebaseAuth;
 
 public class Home extends AppCompatActivity {
 
     MaterialButton  buttonAddStaff, buttonRemoveStaff, buttonFeeDetails;
+    AppCompatImageView logout;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -23,8 +27,15 @@ public class Home extends AppCompatActivity {
         buttonAddStaff=findViewById(R.id.buttonAddStaff);
         buttonRemoveStaff=findViewById(R.id.buttonRemoveStaff);
         buttonFeeDetails=findViewById(R.id.buttonFeeDetails);
+        logout=findViewById(R.id.logout);
+
         setListeners();
+        Logout();
+
     }
+    public void Logout(){
+        FirebaseAuth.getInstance().signOut();
+        logout.setOnClickListener(v -> startActivity(new Intent(getApplicationContext(), MainActivity.class)) );}
 
     private void setListeners(){
         buttonAddStaff.setOnClickListener(v ->
@@ -33,7 +44,6 @@ public class Home extends AppCompatActivity {
                 startActivity(new Intent(getApplicationContext(), RemoveStaff.class)));
         buttonFeeDetails.setOnClickListener(v ->
                 startActivity(new Intent(getApplicationContext(), FeeDetails.class)));
-
     }
 
 }

@@ -21,21 +21,6 @@
             android:textColor="@color/colorWhite"
             android:fontFamily="@font/ubuntu_bold"
             />
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/buttonAddStudent"
-            android:layout_width="match_parent"
-            android:layout_height="150dp"
-            android:backgroundTint="@color/colorFieldBackground"
-            android:layout_margin="20dp"
-            android:text="Add Student"
-            app:cornerRadius="20dp"
-            android:fontFamily="@font/ubuntu_medium"
-            android:gravity="center_vertical"
-            android:textSize="30sp"
-            android:textColor="@color/colorTextHint"
-            android:shadowRadius="20"
-            android:shadowColor="@color/colorBlack"
-            />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/buttonAddStaff"
@@ -46,42 +31,6 @@
             android:layout_marginRight="20dp"
             android:layout_marginBottom="20dp"
             android:text="Add Staff"
-            app:cornerRadius="20dp"
-            android:fontFamily="@font/ubuntu_medium"
-            android:gravity="center_vertical"
-            android:textSize="30sp"
-            android:textColor="@color/colorTextHint"
-            android:shadowRadius="20"
-            android:shadowColor="@color/colorBlack"
-            />
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/buttonAddParent"
-            android:layout_width="match_parent"
-            android:layout_height="150dp"
-            android:backgroundTint="@color/colorFieldBackground"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:layout_marginBottom="20dp"
-            android:text="Add Parent"
-            app:cornerRadius="20dp"
-            android:fontFamily="@font/ubuntu_medium"
-            android:gravity="center_vertical"
-            android:textSize="30sp"
-            android:textColor="@color/colorTextHint"
-            android:shadowRadius="20"
-            android:shadowColor="@color/colorBlack"
-            />
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/buttonRemoveStudent"
-            android:layout_width="match_parent"
-            android:layout_height="150dp"
-            android:backgroundTint="@color/colorFieldBackground"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:layout_marginBottom="20dp"
-            android:text="Remove Student"
             app:cornerRadius="20dp"
             android:fontFamily="@font/ubuntu_medium"
             android:gravity="center_vertical"
@@ -110,14 +59,14 @@
             />
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/buttonRemoveParent"
+            android:id="@+id/buttonFeeDetails"
             android:layout_width="match_parent"
             android:layout_height="150dp"
             android:backgroundTint="@color/colorFieldBackground"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
             android:layout_marginBottom="20dp"
-            android:text="Remove Parent"
+            android:text="Fee Details"
             app:cornerRadius="20dp"
             android:fontFamily="@font/ubuntu_medium"
             android:gravity="center_vertical"

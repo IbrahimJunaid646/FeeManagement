@@ -7,22 +7,26 @@ import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 
-public class RemoveParent extends AppCompatActivity {
+import com.google.firebase.auth.FirebaseAuth;
 
-    AppCompatImageView REV;
+public class StaffHome extends AppCompatActivity {
+
+    AppCompatImageView LogOut;
 
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_remove_parent);
+        setContentView(R.layout.activity_staff_home);
+
+        LogOut=findViewById(R.id.LogOut);
         getSupportActionBar().hide();
 
-        REV=findViewById(R.id.REV);
-        setListeners();
+        LogOut();
+
     }
 
-    private void setListeners(){
-        REV.setOnClickListener(v -> onBackPressed());
-    }
+    public void LogOut(){
+        FirebaseAuth.getInstance().signOut();
+        LogOut.setOnClickListener(v -> startActivity(new Intent(getApplicationContext(), MainActivity.class)) );}
 }

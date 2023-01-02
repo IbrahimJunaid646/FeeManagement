@@ -24,7 +24,7 @@
             />
 
         <androidx.appcompat.widget.AppCompatImageView
-            android:id="@+id/logout"
+            android:id="@+id/LogOut"
             android:layout_width="@dimen/_35sdp"
             android:layout_height="@dimen/_35sdp"
             android:src="@drawable/logout"
@@ -53,7 +53,7 @@
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
             android:layout_marginBottom="20dp"
-            android:text="Add Staff"
+            android:text="Insert Fees"
             app:cornerRadius="20dp"
             android:fontFamily="@font/ubuntu_medium"
             android:gravity="center_vertical"
@@ -71,7 +71,7 @@
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
             android:layout_marginBottom="20dp"
-            android:text="Remove Staff"
+            android:text="Mark Attendence"
             app:cornerRadius="20dp"
             android:fontFamily="@font/ubuntu_medium"
             android:gravity="center_vertical"
@@ -89,7 +89,7 @@
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
             android:layout_marginBottom="20dp"
-            android:text="Fee Details"
+            android:text="View Students"
             app:cornerRadius="20dp"
             android:fontFamily="@font/ubuntu_medium"
             android:gravity="center_vertical"

@@ -1,81 +1,110 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<androidx.coordinatorlayout.widget.CoordinatorLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="@color/colorPrimary"
-    android:gravity="center"
     tools:context=".MainActivity">
 
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
         android:gravity="center"
-        android:text="Log In"
-        android:textSize="50sp"
-        android:textColor="@color/colorWhite"
-        android:fontFamily="@font/ubuntu_bold"
-        android:layout_marginBottom="20dp"
-        />
+        android:layout_marginBottom="10dp"
+        android:paddingBottom="10dp"
+        >
 
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/_35sdp"
-        android:background="@drawable/background_edit_text"
-        android:layout_marginLeft="40dp"
-        android:layout_marginRight="40dp"
-        android:layout_marginTop="40dp"
-        android:hint="Email"
-        android:imeOptions="actionNext"
-        android:inputType="textEmailAddress"
-        android:paddingLeft="15dp"
-        android:textColor="@color/colorWhite"
-        android:textColorHint="@color/colorTextHint"
-        />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Log In"
+            android:textSize="50sp"
+            android:textColor="@color/colorWhite"
+            android:fontFamily="@font/ubuntu_bold"
+            android:layout_marginBottom="20dp"
+            />
 
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/_35sdp"
-        android:background="@drawable/background_edit_text"
-        android:layout_marginLeft="40dp"
-        android:layout_marginRight="40dp"
-        android:layout_marginTop="@dimen/_20sdp"
-        android:hint="Password"
-        android:inputType="textPassword"
-        android:imeOptions="actionDone"
-        android:paddingLeft="15dp"
-        android:textColor="@color/colorWhite"
-        android:textColorHint="@color/colorTextHint"
-        />
+        <EditText
+            android:id="@+id/emailText"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_35sdp"
+            android:background="@drawable/background_edit_text"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginTop="40dp"
+            android:hint="Email"
+            android:imeOptions="actionNext"
+            android:inputType="textEmailAddress"
+            android:paddingLeft="15dp"
+            android:paddingEnd="15dp"
+            android:textColor="@color/colorWhite"
+            android:textColorHint="@color/colorTextHint"
+            />
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/signInButton"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/_40sdp"
-        android:backgroundTint="@color/colorAccent"
-        app:cornerRadius="20dp"
-        android:layout_marginLeft="40dp"
-        android:layout_marginRight="40dp"
-        android:layout_marginTop="@dimen/_30sdp"
-        android:text="Sign In"
-        android:textColor="@color/colorBlack"
-        android:fontFamily="@font/ubuntu_medium"
-        />
+        <EditText
+            android:id="@+id/passwordText"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_35sdp"
+            android:background="@drawable/background_edit_text"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:imeOptions="actionDone"
+            android:paddingLeft="15dp"
+            android:paddingEnd="15dp"
+            android:textColor="@color/colorWhite"
+            android:textColorHint="@color/colorTextHint"
+            />
 
-    <TextView
-        android:id="@+id/buttonForgotPassword"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Forgot Password?"
-        android:gravity="center"
-        android:textColor="@color/colorTextHint"
-        android:layout_marginTop="@dimen/_5sdp"
-        android:shadowRadius="10"
-        android:shadowColor="@color/colorBlack"
-        />
+        <FrameLayout
+            android:id="@+id/layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:animateLayoutChanges="true"
+            >
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/signInButton"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:backgroundTint="@color/colorAccent"
+                app:cornerRadius="20dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:text="Sign In"
+                android:textColor="@color/colorBlack"
+                android:fontFamily="@font/ubuntu_medium"
+                />
+            <ProgressBar
+                android:id="@+id/loginProgressbar"
+                android:layout_width="@dimen/_25sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_gravity="center"
+                android:visibility="invisible"
+                />
 
 
-</LinearLayout>
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/buttonForgotPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Forgot Password?"
+            android:gravity="center"
+            android:textColor="@color/colorTextHint"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:shadowRadius="10"
+            android:shadowColor="@color/colorBlack"
+            />
+
+
+    </LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

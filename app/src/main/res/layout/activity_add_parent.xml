@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".addNewStaff"
+    tools:context=".AddParent"
     android:orientation="vertical"
     android:background="@color/colorPrimary">
 
@@ -17,7 +17,7 @@
         >
 
         <androidx.appcompat.widget.AppCompatImageView
-            android:id="@+id/button"
+            android:id="@+id/Back"
             android:layout_width="@dimen/_30sdp"
             android:layout_height="@dimen/_30sdp"
             android:src="@drawable/back_button"
@@ -32,7 +32,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="@dimen/_30sdp"
-            android:text="Add New Staff"
+            android:text="Add Parent"
             android:gravity="center"
             android:textColor="@color/colorWhite"
             android:textSize="@dimen/_20sdp"
@@ -77,7 +77,6 @@
             android:textColorHint="@color/colorTextHint"
             android:textColor="@color/colorWhite"
             />
-
         <EditText
             android:layout_width="match_parent"
             android:layout_height="@dimen/_35sdp"
@@ -85,7 +84,7 @@
             android:layout_marginLeft="40dp"
             android:layout_marginRight="40dp"
             android:layout_marginTop="@dimen/_20sdp"
-            android:hint="Staff Name"
+            android:hint="Parent Name"
             android:paddingStart="@dimen/_12sdp"
             android:paddingEnd="@dimen/_12sdp"
             android:imeOptions="actionNext"
@@ -101,7 +100,7 @@
             android:layout_marginLeft="40dp"
             android:layout_marginRight="40dp"
             android:layout_marginTop="@dimen/_20sdp"
-            android:hint="Staff ID"
+            android:hint="Parent of?(Student ID)"
             android:paddingStart="@dimen/_12sdp"
             android:paddingEnd="@dimen/_12sdp"
             android:imeOptions="actionDone"

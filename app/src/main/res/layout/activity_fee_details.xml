@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".FeeDetails"
+    tools:context=".RemoveStudent"
     android:orientation="vertical"
     android:background="@color/colorPrimary"
     >
@@ -18,7 +18,7 @@
         >
 
         <androidx.appcompat.widget.AppCompatImageView
-            android:id="@+id/Rev"
+            android:id="@+id/REV"
             android:layout_width="@dimen/_30sdp"
             android:layout_height="@dimen/_30sdp"
             android:src="@drawable/back_button"
@@ -33,7 +33,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="@dimen/_30sdp"
-            android:text="Fee Details"
+            android:text="Remove Parent"
             android:gravity="center"
             android:textColor="@color/colorWhite"
             android:textSize="@dimen/_20sdp"
@@ -67,7 +67,7 @@
             android:layout_marginStart="@dimen/_12sdp"
             android:background="@null"
             android:fontFamily="@font/ubuntu_regular"
-            android:hint="Search by Staff ID"
+            android:hint="Search Parent by Student ID"
             android:imeOptions="actionDone"
             android:importantForAutofill="no"
             android:inputType="number"
@@ -87,7 +87,7 @@
         android:layout_marginTop="@dimen/_12sdp"
         android:backgroundTint="@color/colorAccent"
         app:cornerRadius="20dp"
-        android:text="Search Student"
+        android:text="Search Parent"
         android:textColor="@color/colorBlack"
         android:fontFamily="@font/ubuntu_regular"
         />

@@ -46,14 +46,14 @@
         >
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/buttonAddStaff"
+            android:id="@+id/buttonAddStudent"
             android:layout_width="match_parent"
             android:layout_height="150dp"
             android:backgroundTint="@color/colorFieldBackground"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
             android:layout_marginBottom="20dp"
-            android:text="Insert Fees"
+            android:text="ADD STUDENT"
             app:cornerRadius="20dp"
             android:fontFamily="@font/ubuntu_medium"
             android:gravity="center_vertical"

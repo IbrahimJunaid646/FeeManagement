@@ -23,7 +23,6 @@ import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.button.MaterialButton;
-import com.google.android.material.snackbar.Snackbar;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
@@ -56,12 +55,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                if (email.getText().toString().equals("admin@apptech.com") && password.getText().toString().equals("123456")) {
+                if (email.getText().toString().contains("admin@apptech.com") && password.getText().toString().contains("123456")) {
                     Intent intent = new Intent(MainActivity.this, Home.class);
                     startActivity(intent);
                     finish();
-                    return;
                 }
+
+
                 String Email = email.getText().toString().trim();
                 String Password = password.getText().toString().trim();
 
@@ -77,8 +77,8 @@ public class MainActivity extends AppCompatActivity {
                     password.setError("Password Must be >= 6 Character");
                     return;
                 }
-//                loginProgressbar.setVisibility(View.VISIBLE);
-//                signInButton.setVisibility(View.GONE);
+                loginProgressbar.setVisibility(View.VISIBLE);
+                signInButton.setVisibility(View.GONE);
 
                 FrAuth.signInWithEmailAndPassword(Email, Password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override

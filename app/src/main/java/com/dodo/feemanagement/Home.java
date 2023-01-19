@@ -36,7 +36,6 @@ public class Home extends AppCompatActivity {
     public void Logout(){
         FirebaseAuth.getInstance().signOut();
         logout.setOnClickListener(v -> startActivity(new Intent(getApplicationContext(), MainActivity.class)) );}
-
     private void setListeners(){
         buttonAddStaff.setOnClickListener(v ->
                 startActivity(new Intent(getApplicationContext(), addNewStaff.class)));

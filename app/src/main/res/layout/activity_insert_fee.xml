@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".FeeDetails"
+    tools:context=".InsertFee"
     android:orientation="vertical"
     android:background="@color/colorPrimary"
     >
@@ -18,7 +18,7 @@
         >
 
         <androidx.appcompat.widget.AppCompatImageView
-            android:id="@+id/onBack"
+            android:id="@+id/bac"
             android:layout_width="@dimen/_30sdp"
             android:layout_height="@dimen/_30sdp"
             android:src="@drawable/back_button"
@@ -33,7 +33,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="@dimen/_30sdp"
-            android:text="Fee Details"
+            android:text="INSERT FEES"
             android:gravity="center"
             android:textColor="@color/colorWhite"
             android:textSize="@dimen/_20sdp"
@@ -87,52 +87,52 @@
         android:layout_marginTop="@dimen/_12sdp"
         android:backgroundTint="@color/colorAccent"
         app:cornerRadius="20dp"
-        android:text="Search"
+        android:text="Search Parent"
         android:textColor="@color/colorBlack"
         android:fontFamily="@font/ubuntu_regular"
         />
 
-    <androidx.cardview.widget.CardView
+    <TextView
         android:layout_width="match_parent"
-        android:layout_height="150dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginBottom="20dp"
-        android:layout_marginTop="20dp"
-        app:cardCornerRadius="@dimen/_20ssp"
-        app:cardBackgroundColor="@color/colorFieldBackground">
+        android:layout_height="wrap_content"
+        android:text="NAME"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginLeft="@dimen/_20sdp"
+        android:layout_marginRight="@dimen/_20sdp"
+        android:textSize="@dimen/_20ssp"
+        android:textColor="@color/colorWhite"
+        android:fontFamily="@font/ubuntu_bold"
+        />
+    <EditText
+        android:id="@+id/emailText"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_35sdp"
+        android:background="@drawable/background_edit_text"
+        android:layout_marginLeft="@dimen/_20sdp"
+        android:layout_marginRight="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:hint="Fees"
+        android:imeOptions="actionNext"
+        android:inputType="number"
+        android:paddingLeft="15dp"
+        android:paddingEnd="15dp"
+        android:textColor="@color/colorWhite"
+        android:textColorHint="@color/colorTextHint"
+        />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Name"
-                android:textSize="@dimen/_20ssp"
-                android:textColor="@color/colorWhite"
-                android:fontFamily="@font/ubuntu_bold"
-                android:layout_margin="@dimen/_20sdp"/>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Fee Details"
-                android:textSize="@dimen/_20ssp"
-                android:textColor="@color/colorWhite"
-                android:fontFamily="@font/ubuntu_medium"
-                android:layout_marginLeft="@dimen/_20sdp"
-                android:layout_marginRight="@dimen/_20sdp"/>
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_marginStart="@dimen/_40sdp"
+        android:layout_marginEnd="@dimen/_40sdp"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:backgroundTint="@color/colorAccent"
+        app:cornerRadius="20dp"
+        android:text="add fees"
+        android:textColor="@color/colorBlack"
+        android:fontFamily="@font/ubuntu_regular"
+        />
 
-
-
-
-        </LinearLayout>
-
-
-
-
-    </androidx.cardview.widget.CardView>
 
 
 </LinearLayout>

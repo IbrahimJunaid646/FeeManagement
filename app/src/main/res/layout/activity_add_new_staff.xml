@@ -48,6 +48,7 @@
         >
 
         <EditText
+            android:id="@+id/emailStaff"
             android:layout_width="match_parent"
             android:layout_height="@dimen/_35sdp"
             android:background="@drawable/background_edit_text"
@@ -63,6 +64,7 @@
             />
 
         <EditText
+            android:id="@+id/passwordStaff"
             android:layout_width="match_parent"
             android:layout_height="@dimen/_35sdp"
             android:background="@drawable/background_edit_text"
@@ -79,6 +81,7 @@
             />
 
         <EditText
+            android:id="@+id/nameStaff"
             android:layout_width="match_parent"
             android:layout_height="@dimen/_35sdp"
             android:background="@drawable/background_edit_text"
@@ -95,6 +98,7 @@
             />
 
         <EditText
+            android:id="@+id/idStaff"
             android:layout_width="match_parent"
             android:layout_height="@dimen/_35sdp"
             android:background="@drawable/background_edit_text"
@@ -111,6 +115,7 @@
             />
 
         <com.google.android.material.button.MaterialButton
+            android:id="@+id/addStaffButton"
             android:layout_width="match_parent"
             android:layout_height="@dimen/_40sdp"
             android:backgroundTint="@color/colorAccent"

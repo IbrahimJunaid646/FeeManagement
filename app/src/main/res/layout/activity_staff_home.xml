@@ -6,6 +6,31 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Welcome,"
+            android:textSize="@dimen/_20ssp"
+            android:textColor="@color/colorWhite"
+            android:fontFamily="@font/ubuntu_bold"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Teacher"
+            android:textSize="@dimen/_20ssp"
+            android:textColor="@color/colorAccent"
+            android:fontFamily="@font/ubuntu_bold"
+            android:layout_marginLeft="@dimen/_10sdp"/>
+
+
+
+    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -46,7 +71,7 @@
         >
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/buttonAddStaff"
+            android:id="@+id/insertfee"
             android:layout_width="match_parent"
             android:layout_height="150dp"
             android:backgroundTint="@color/colorFieldBackground"
@@ -64,7 +89,7 @@
             />
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/buttonRemoveStaff"
+            android:id="@+id/markattendence"
             android:layout_width="match_parent"
             android:layout_height="150dp"
             android:backgroundTint="@color/colorFieldBackground"
@@ -82,7 +107,7 @@
             />
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/buttonFeeDetails"
+            android:id="@+id/viewstudent"
             android:layout_width="match_parent"
             android:layout_height="150dp"
             android:backgroundTint="@color/colorFieldBackground"

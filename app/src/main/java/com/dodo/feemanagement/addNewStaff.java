@@ -42,11 +42,11 @@ public class addNewStaff extends AppCompatActivity {
         setContentView(R.layout.activity_add_new_staff);
         getSupportActionBar().hide();
         buttonback=findViewById(R.id.button);
-        email=findViewById(R.id.email);
-        password=findViewById(R.id.password);
-        staffname=findViewById(R.id.staffname);
-        staffid=findViewById(R.id.staffid);
-        adduserbutton=findViewById(R.id.adduserbutton);
+        email=findViewById(R.id.emailStaff);
+        password=findViewById(R.id.passwordStaff);
+        staffname=findViewById(R.id.nameStaff);
+        staffid=findViewById(R.id.idStaff);
+        adduserbutton=findViewById(R.id.addStaffButton);
 
 
         fAuth=FirebaseAuth.getInstance();
@@ -77,15 +77,15 @@ public class addNewStaff extends AppCompatActivity {
                     password.setError("Password Must be >= 6 Character");
                     return;
                 }
-//                ProgressBar.setVisibility(View.VISIBLE);
-//                adduserbutton.setVisibility(View.GONE);
+                ProgressBar.setVisibility(View.VISIBLE);
+                adduserbutton.setVisibility(View.GONE);
 
 
                 fAuth.createUserWithEmailAndPassword(Email,Password).addOnCompleteListener(task -> {
                     if (task.isSuccessful()){
                         Toast.makeText(addNewStaff.this, "User Created", Toast.LENGTH_SHORT).show();
-//                            ProgressBar.setVisibility(View.GONE);
-//                            adduserbutton.setVisibility(View.VISIBLE);
+                            ProgressBar.setVisibility(View.GONE);
+                            adduserbutton.setVisibility(View.VISIBLE);
                         FirebaseUser user=fAuth.getCurrentUser();
                         Toast.makeText(addNewStaff.this, "User Created", Toast.LENGTH_SHORT).show();
                         DocumentReference df=fstore.collection("Users").document(user.getUid());
@@ -100,8 +100,6 @@ public class addNewStaff extends AppCompatActivity {
                         password.setText("");
                         staffid.setText("");
                         staffname.setText("");
-                        finish();
-
                     }else {
                         Toast.makeText(addNewStaff.this, "Error !"+task.getException().getMessage(), Toast.LENGTH_SHORT).show();
                     }

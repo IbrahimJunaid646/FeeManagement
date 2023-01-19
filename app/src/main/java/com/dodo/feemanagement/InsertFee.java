@@ -1,26 +1,26 @@
 package com.dodo.feemanagement;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.AppCompatImageView;
-
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.View;
 
-public class FeeDetails extends AppCompatActivity {
-    AppCompatImageView onBack;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.AppCompatImageView;
 
+public class InsertFee extends AppCompatActivity {
+
+    AppCompatImageView bac;
+
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_fee_details);
+        setContentView(R.layout.activity_insert_fee);
         getSupportActionBar().hide();
 
-        onBack=findViewById(R.id.onBack);
+        bac=findViewById(R.id.bac);
 
-        listeners();
-    }
-    public void listeners(){
-        onBack.setOnClickListener(new View.OnClickListener() {
+        bac.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 onBackPressed();

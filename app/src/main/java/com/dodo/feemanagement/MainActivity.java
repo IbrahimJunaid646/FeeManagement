@@ -23,6 +23,7 @@ import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.button.MaterialButton;
+import com.google.android.material.snackbar.Snackbar;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
@@ -41,7 +42,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         getSupportActionBar().hide();
         signInButton = findViewById(R.id.signInButton);
         email = findViewById(R.id.emailText);
@@ -49,21 +49,17 @@ public class MainActivity extends AppCompatActivity {
         loginProgressbar = findViewById(R.id.loginProgressbar);
         buttonForgetPassword = findViewById(R.id.buttonForgotPassword);
         FrAuth = FirebaseAuth.getInstance();
-
-
         signInButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                if (email.getText().toString().contains("admin@apptech.com") && password.getText().toString().contains("123456")) {
+                if (email.getText().toString().contains("admin@apptech.com") && password.getText().toString().contains("admin121")) {
                     Intent intent = new Intent(MainActivity.this, Home.class);
                     startActivity(intent);
                     finish();
                 }
-
-
-                String Email = email.getText().toString().trim();
-                String Password = password.getText().toString().trim();
+                String Email = email.getText().toString();
+                String Password = password.getText().toString();
 
                 if (TextUtils.isEmpty(Email)) {
                     email.setError("Enter Valid Email");
@@ -77,24 +73,34 @@ public class MainActivity extends AppCompatActivity {
                     password.setError("Password Must be >= 6 Character");
                     return;
                 }
-                loginProgressbar.setVisibility(View.VISIBLE);
-                signInButton.setVisibility(View.GONE);
+                else {
+                    startActivity(new Intent(getApplicationContext(),Home.class));
+                }
+//                loginProgressbar.setVisibility(View.VISIBLE);
+//                signInButton.setVisibility(View.GONE);
 
                 FrAuth.signInWithEmailAndPassword(Email, Password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
-                            if (task.isSuccessful()) {
-                                Toast.makeText(MainActivity.this, "Login SuccessFull", Toast.LENGTH_SHORT).show();
+                            Snackbar snackbar = Snackbar.make(v,"Successfully login",Snackbar.LENGTH_LONG);
+                            snackbar.show();
+                            System.out.println("login");
                                 Intent i = new Intent(getApplicationContext(), StaffHome.class);
                                 startActivity(i);
                                 finish();
-                            } else {
-                                Toast.makeText(MainActivity.this, "Error !" + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
-                                loginProgressbar.setVisibility(View.GONE);
-                                signInButton.setVisibility(View.VISIBLE);
-                            }
                         }
+//                        else {
+//                            Toast.makeText(MainActivity.this, "Error !" + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
+////                            loginProgressbar.setVisibility(View.GONE);
+////                            signInButton.setVisibility(View.VISIBLE);
+//                        }
+                    }
+                }).addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        Snackbar snackbar = Snackbar.make(v,e.getMessage(),Snackbar.LENGTH_LONG);
+                        snackbar.show();
                     }
                 });
 

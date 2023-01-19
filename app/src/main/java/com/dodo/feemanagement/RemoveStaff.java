@@ -6,10 +6,11 @@ import androidx.appcompat.widget.AppCompatImageView;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
 public class RemoveStaff extends AppCompatActivity {
 
-    AppCompatImageView Rev;
+    AppCompatImageView rev;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -18,11 +19,13 @@ public class RemoveStaff extends AppCompatActivity {
         setContentView(R.layout.activity_remove_staff);
         getSupportActionBar().hide();
 
-        Rev=findViewById(R.id.Rev);
-        setListners();
-    }
+        rev=findViewById(R.id.rev);
+      rev.setOnClickListener(new View.OnClickListener() {
+          @Override
+          public void onClick(View view) {
+              onBackPressed();
 
-    private void setListners(){
-        Rev.setOnClickListener(v -> onBackPressed());
+          }
+      });
     }
 }
